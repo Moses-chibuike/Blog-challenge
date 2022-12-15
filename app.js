@@ -50,10 +50,12 @@ app.post("/compose", function(req, res){
 
 });
 
+app.get("/posts/:postName", function(req, res){
+  const requestedTitle = _.lowerCase(req.params.postName);
 
+ 
 
-
-
+});
 
 
 app.listen(3000, function() {
