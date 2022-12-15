@@ -15,10 +15,12 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+let posts = [];
 
 app.get("/", function(req, res){
   res.render("home", {
     startingContent: homeStartingContent,
+    posts: posts
     });
 });
 
